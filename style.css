@@ -1,0 +1,239 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background: #F5F5F7;
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos 100% da altura da viewport */
+}
+
+header {
+    display: flex;
+    background-color: #141414;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    height: 80px; /* Aumentei a altura do header para melhorar visualmente */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 8%; /* Adaptei o padding para ser responsivo */
+}
+
+li a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.logo {
+    height: 20px;
+}
+
+/* Main */
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem 5%; /* Adaptei o padding para ser responsivo */
+}
+
+.main-text h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.main-text h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.main-text p {
+    margin-bottom: 10px;
+}
+
+.main-text h6 {
+    color: #626262;
+    font-size: 20px;
+    margin: 30px 0;
+    font-weight: 300;
+}
+
+.main-text button {
+    padding: 10px 20px;
+    background: #0071e3;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.5s;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.main-text button:hover {
+    opacity: 0.85;
+}
+
+.main-text h5 {
+    font-size: 1rem;
+    color: #444;
+    margin: 20px 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-text .content span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px #888;
+    transition: all 0.5s;
+}
+
+.main-text .content span:hover {
+    opacity: 0.8;
+}
+
+/* Imagem iPhone */
+.img-iphone {
+    width: 100%; /* Imagem ocupando toda a largura disponível */
+    max-width: 500px; /* Limitar o tamanho máximo da imagem */
+    margin-top: 100px; /* Ajustei a margem conforme necessário */
+}
+
+/* Círculo */
+.circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #81A5C4;
+    clip-path: circle(50% at 100% 100%); /* Ajuste dinâmico do clip-path */
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 15px 5%; /* Reduzir o padding do header */
+    } 
+    ul {
+        gap: 50px; /* Reduzir o espaçamento entre os itens do menu */
+        padding: 0 5%; /* Ajustar o padding horizontal */
+    }
+    .logo {
+        height: 15px; /* Reduzir o tamanho do logo */
+    }
+
+    .navigation ul {
+        flex-direction: column; /* Empilhar itens do menu verticalmente */
+        gap: 30px; /* Ajustar o espaçamento entre os itens */
+        padding: 0; /* Remover o padding horizontal */
+    }
+
+    .navigation .logo {
+        width: 40px; /* Reduzir o tamanho do logo */
+    }
+
+    .main-text img {
+        width: 12rem; /* Reduzir o tamanho da imagem principal */
+    }
+    .main-text h2 {
+        font-size: 24px; /* Reduzir o tamanho do título h2 */
+    }
+
+    .main-text h3 {
+        font-size: 32px; /* Reduzir o tamanho do título h3 */
+    }
+
+    .main-text h6 {
+        font-size: 16px; /* Reduzir o tamanho do subtítulo h6 */
+        margin: 20px 0; /* Ajustar a margem do subtítulo */
+    }
+
+    .main-text h3 {
+        font-size: 2.5rem; /* Reduzir o tamanho do título principal */
+    }
+
+    .main-text .btn {
+        font-size: 1.2rem; /* Reduzir o tamanho do botão */
+        padding: 8px 20px; /* Ajustar o padding do botão */
+    } 
+    .circle {
+        display: none; /* Esconder completamente o círculo */
+    }
+}
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 5%; /* Reduzir ainda mais o padding do header */
+    }
+
+    ul {
+        display: none; /* Ocultar completamente o menu */
+    }
+    .logo {
+        height: 12px; /* Reduzir ainda mais o tamanho do logo */
+    }
+
+
+    .navigation ul {
+        gap: 20px; /* Reduzir o espaçamento entre os itens */
+    }
+
+    .navigation .logo {
+        width: 30px; /* Reduzir ainda mais o tamanho do logo */
+    }
+
+    main section {
+        flex-direction: column; /* Empilhar seções principais verticalmente */
+    }
+
+    .main-text img {
+        width: 10rem; /* Reduzir ainda mais o tamanho da imagem principal */
+    }
+    .main-text h2 {
+        font-size: 20px; /* Reduzir ainda mais o tamanho do título h2 */
+    }
+
+    .main-text h3 {
+        font-size: 28px; /* Reduzir ainda mais o tamanho do título h3 */
+    }
+
+    .main-text h6 {
+        font-size: 14px; /* Reduzir ainda mais o tamanho do subtítulo h6 */
+        margin: 15px 0; /* Ajustar a margem do subtítulo */
+    }
+
+    .main-text h3 {
+        font-size: 2rem; /* Reduzir ainda mais o tamanho do título principal */
+    }
+
+    .main-text .btn {
+        font-size: 1rem; /* Reduzir ainda mais o tamanho do botão */
+        padding: 6px 16px; /* Ajustar o padding do botão */
+    }
+
+    .circle {
+        display: none; /* Esconder completamente o círculo */
+    }
+}

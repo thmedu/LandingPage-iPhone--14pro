@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-AUKZBkoM7NlcIBusn0X4JWcFvX+NjNpbd3b5rVk+MyGK72F7E4n09OEG9zAvYUO7X1gB4P+3igU6m7Jbkvl2Fw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Apple</title>
+</head>
+
+<body>
+    <header>
+        <img src="./img/logo.png" alt="Logo do iPhone" class="logo">
+        <ul class="navigation">
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">Tv e Casa</a></li>
+            <li><a href="#">Entretenimento</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Suporte</a></li>
+        </ul>
+        <div class="header-icons">
+            <a href="#" class="header-icon"><i class="fas fa-search"></i></a>
+            <a href="#" class="header-icon"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção principal -->
+        <section class="hero-section">
+            <div class="circle"></div>
+            <div class="main-text">
+                <h2>iPhone 14</h2>
+                <h3>Seu novo iPhone.</h3>
+                <h3>Mais pessoal do que nunca.</h3>
+                <p>Qual é o melhor para você?</p>
+                <h6>A partir de R$ 5.999*</h6>
+                <div class="button-container">
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+                <h5>Escolha sua cor:</h5>
+                <div class="content">
+                    <span id="azul" onclick="imgSlider('./img/iphone-azul.png'); circleChange('#81A5C4')"></span>
+                    <span id="amarelo" onclick="imgSlider('./img/iphone-amarelo.png'); circleChange('#F7DA47')"></span>
+                    <span id="branco" onclick="imgSlider('./img/iphone-branco.png'); circleChange('#C1C1C1')"></span>
+                    <span id="preto" onclick="imgSlider('./img/iphone-preto.png'); circleChange('#272D33')"></span>
+                    <span id="vermelho"
+                        onclick="imgSlider('./img/iphone-vemelho.png'); circleChange('#B50012')"></span>
+                    <span id="roxo" onclick="imgSlider('./img/iphone-roxo.png'); circleChange('#E5CDF6')"></span>
+                </div>
+            </div>
+            <img src="./img/iphone-azul.png" class="img-iphone" alt="Imagem do iPhone" id="phone">
+        </section>
+
+
+    </main>
+
+    <script type="text/javascript">
+        /*Função de mudar o celular*/
+        function imgSlider(e) {
+            document.querySelector('#phone').src = e;
+        }
+
+        /*Função de mudar a cor do circulo*/
+        function circleChange(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
